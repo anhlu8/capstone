@@ -1,6 +1,6 @@
 pipeline {
     agent { docker { image 'python:3.7.3-stretch' } }
-    // def login = ecrLogin()
+    def login = ecrLogin()
     stages {
         stage('Building image') {
             steps {
