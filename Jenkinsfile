@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh 'echo "Building Docker image..."'
                 withAWS(credentials:'aws-capstone', region:'us-east-1') {    
-                    sh "$(aws ecr get-login --no-include-email --region us-east-1)"                
+                    // sh "$(aws ecr get-login --no-include-email --region us-east-1)"                
                     sh "docker build -t udacity ."
                     sh "docker tag udacity:latest 278749303080.dkr.ecr.us-east-1.amazonaws.com/udacity:latest"
                     sh "docker push 278749303080.dkr.ecr.us-east-1.amazonaws.com/udacity:latest"
