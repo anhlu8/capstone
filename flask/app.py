@@ -6,7 +6,7 @@ CORS(app)
 
 @app.route('/')
 def hello_world():
-    return 'Hello world!!!'
+    return 'Hi world!!!'
 
 
 @app.route('/name', methods=["POST"])
