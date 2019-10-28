@@ -6,6 +6,8 @@
 
 Command for installing jenkins if you use Ubuntu:
 ```
+sudo su -
+hostname jenkins
 sudo apt-get update
 sudo apt install -y default-jdk
 wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
@@ -25,3 +27,4 @@ sudo apt-get install -y jenkins
 - Blue Ocean Executor Info
 
 * Install AWS plugins into Jenkins
+<!-- https://aws.amazon.com/blogs/devops/set-up-a-build-pipeline-with-jenkins-and-amazon-ecs/ -->
